@@ -1,36 +1,29 @@
-/* styles.css */
-
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f3f4f6;
-    color: #333;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #333; /* Dark background for a construction aesthetic */
 }
 
+/* Header Styles */
 header {
-    background-color: #1f2937;
-    color: #fff;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #1a1a1a; /* Black header background */
+    padding: 1rem;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #10b981;
+    color: #ecf0f1; /* Light color for logo */
 }
 
 .nav-links {
@@ -39,152 +32,130 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
 .nav-links a {
-    color: #fff;
     text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #ecf0f1; /* Light color for links */
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    background-color: #10b981;
+    color: #27ae60; /* Dark green color on hover */
 }
 
+/* Hero Section */
 .hero {
-    background-image: url('construction-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background: url('hero-image.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
-    padding-top: 80px;
 }
 
-.hero h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
 }
 
-.hero h1 span {
-    color: #10b981;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+.hero-content h1 span {
+    color: #27ae60; /* Dark green highlight color */
 }
 
 .cta-button {
-    padding: 15px 30px;
-    background-color: #10b981;
+    padding: 10px 20px;
+    background: #1a1a1a; /* Dark button background */
     color: #fff;
     border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #0b8a63;
+    background: #2ecc71; /* Lighter green on hover */
 }
 
-.services, .projects, .about, .contact {
-    padding: 80px 20px;
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    background: #1a1a1a; /* Black background for services */
+}
+
+.services h2 {
     text-align: center;
-    background-color: #fff;
-    margin-top: 20px;
-    border-radius: 15px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 36px;
     margin-bottom: 20px;
-    color: #1f2937;
+    font-size: 2rem;
+    color: white; /* Change heading color to white if desired */
 }
 
 .service-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .service-card {
-    background-color: #f9fafb;
-    padding: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: white; /* Darker card background */
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    transition: transform 0.3s;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
-.icon {
-    font-size: 40px;
-    color: #10b981;
-    margin-bottom: 15px;
+.service-card .icon {
+    font-size: 2rem;
+    color: #27ae60; /* Dark green color for icons */
 }
 
 .service-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
+    margin: 10px 0;
+    color: black; /* Black color for service card headings */
 }
 
 .service-card p {
-    font-size: 16px;
-    color: #666;
+    color: black; /* Black color for service card text */
 }
 
- 
 
-.icon {
-    font-size: 40px;
-    color: #10b981;
-    margin-bottom: 15px;
+/* Projects Section */
+.projects {
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .project-gallery {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .project-gallery img {
-    width: 30%;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background: #1a1a1a; /* Same as services section */
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+}
+
+.contact h2 {
+    text-align: center;
     margin-bottom: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.project-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.about p, .contact form {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-size: 18px;
 }
 
 .contact form {
@@ -193,61 +164,47 @@ h2 {
     align-items: center;
 }
 
-.contact input, .contact textarea {
+.contact input, 
+.contact textarea {
     width: 80%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
 }
 
 .contact button {
-    padding: 15px 30px;
-    background-color: #10b981;
+    padding: 10px 20px;
+    background: #1a1a1a; /* Dark button background */
     color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
     cursor: pointer;
-    transition:
-    background-color 0.3s ease;
+    transition: background 0.3s;
 }
 
 .contact button:hover {
-    background-color: #0b8a63;
+    background: #2ecc71; /* Lighter green on hover */
 }
 
+/* Footer Styles */
 footer {
-    background-color: #1f2937;
-    color: #fff;
+    background: #1a1a1a; /* Black footer background */
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .service-cards, .project-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card, .project-gallery img {
-        width: 80%;
-    }
-
-    .hero h1 {
-        font-size: 40px;
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
     .cta-button {
-        font-size: 16px;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr; /* Single column on small screens */
     }
 }
