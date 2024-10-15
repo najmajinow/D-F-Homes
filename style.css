@@ -8,42 +8,57 @@ body {
     background-color: #333; /* Dark background for a construction aesthetic */
 }
 
-/* Header Styles */
+/* Header styles */
 header {
-    background: #1a1a1a; /* Black header background */
-    padding: 1rem;
+    background-color:black; /* Example background color */
+    padding: 10px; /* Reduce padding for a more compact header */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping of nav links on smaller screens */
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ecf0f1; /* Light color for logo */
+    font-size: 24px; /* Adjust the size for visibility */
+    color: #ffffff; /* Logo color */
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
+    justify-content: center; /* Center nav links */
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Remove bullet points */
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 5px 10px; /* Reduce space between links */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #ecf0f1; /* Light color for links */
-    transition: color 0.3s;
+    color: #ffffff; /* Change link color */
+    padding: 5px 10px; /* Add padding for touch targets */
+    border-radius: 4px; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth background transition */
 }
 
 .nav-links a:hover {
-    color: #27ae60; /* Dark green color on hover */
+    background-color: black; /* Darker background on hover */
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center align the links */
+    }
+}
+
 
 /* Hero Section */
 .hero {
